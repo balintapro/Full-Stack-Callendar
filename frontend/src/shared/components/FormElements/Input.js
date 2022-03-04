@@ -29,6 +29,9 @@ const Input = (props) => {
     isValid: props.initialValid || false,
   });
 //  console.log(`inputState: ${JSON.stringify(inputState)}`)
+// a console logos cuccoka mehetnek ki, illetve a saját kommentek is nyugodtan
+// bármikor kicsekkolhatsz a régi commitjaidra, hogy lásd az ilyeneket, de productionre
+// szánt kódot érdemes kitakarítani, sosem tudhatod ki nézi majd.
   const { id, onInput } = props;
   const { value, isValid } = inputState;
 

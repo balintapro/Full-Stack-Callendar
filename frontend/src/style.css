@@ -85,3 +85,46 @@
     top: 100px;
   }
 }
+
+/*
+https://bulma.io/ ezt ajánlanám, minden amit css-el oldottál meg egy pár classal megoldható
+vagy scss-re lenne érdemes váltani
+két paradigma van:
+- 1. paradigma Minden a komponens mellett él és csak ott va használva, iylenkor jó a css is,
+  de apraktikussága miatt scss a nyerő, lehetnek változóid meg funkcióid stb, majdnem mindenhol ezt használják
+
+components/
+  comp1/
+    comp1.jsx
+    comp1.scss
+  comp2/
+    comp2.jsx
+    comp2.scss
+  comp3/
+    comp3.jsx
+    comp3.scss
+  comp4/
+    comp4.jsx
+    comp4.scss
+
+  helpers.scss
+  variables.scss
+
+
+- Egy közös library-t csinálsz scss mappának hívod és külön tartod pl:
+components/
+  comp1/
+  comp2/
+  comp3/
+  comp4/
+
+scss/
+  comp1/*.scss
+  comp2/*.scss
+  comp3/*.scss
+  comp4/*.scss
+  helpers.scss
+  variables.scss
+  index.scss
+
+  */

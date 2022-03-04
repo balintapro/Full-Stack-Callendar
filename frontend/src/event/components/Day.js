@@ -20,6 +20,7 @@ export default function Day({ day, rowIdx }) {
       : '';
   }
 
+  // <div className="day egesz"> sose vegyítsd a nyelveket, vagy legyen angol, vagy végig magyar
   return (
     <div className="day egesz">
       <header className=" day-header">

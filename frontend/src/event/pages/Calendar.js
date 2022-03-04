@@ -25,7 +25,7 @@ export default function Calendar() {
 
   /* HERRE YOU MUST COMMENT OUT TO FETCH DATA FROM BACKEND*/
 
-  /*  useEffect(() => {
+    useEffect(() => {
     const fetchUsers = async () => {
       try {
         const responseData = await sendRequest(
@@ -39,20 +39,24 @@ export default function Calendar() {
         );
 
         savedEvents.map((response) => {
-          dispatchCalEvent({ type: 'delete', payload: response });
+          // ezekből szerintem hiányzik a return, nem tudom lecsekkolni most, hogy csinál e valamit a nélkül
+          return dispatchCalEvent({ type: 'delete', payload: response });
         });
 
         responseData.events.map((elem) => {
-          elem.day = parseInt(elem.day);
+          // ezekből szerintem hiányzik a return, nem tudom lecsekkolni most, hogy csinál e valamit a nélkül
+          return elem.day = parseInt(elem.day);
         });
 
         responseData.events.map((response) => {
-          dispatchCalEvent({ type: 'push', payload: response });
+          // ezekből szerintem hiányzik a return, nem tudom lecsekkolni most, hogy csinál e valamit a nélkül
+          return dispatchCalEvent({ type: 'push', payload: response });
         });
       } catch (err) {}
     };
     fetchUsers();
-  }, [sendRequest]);*/
+      // a linter szerint ezek hiányoztak még az effectnek
+  }, [auth.token, dispatchCalEvent, savedEvents, sendRequest]);
 
   /* END HERRE YOU MUST COMMENT OUT TO FETCH DATA FROM BACKEND*/
 

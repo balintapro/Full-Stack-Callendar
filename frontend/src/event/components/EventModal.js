@@ -12,11 +12,12 @@ import './EventModal.css';
 const labelsClasses = ['indigo', 'gray', 'green', 'blue', 'red', 'purple'];
 
 export default function EventModal() {
+  // érdemes sorbe rendezni ezeket, először funkciók utána változók, vagy fordítva
   const {
     setShowEventModal,
-    daySelected,
     dispatchCalEvent,
     setSelectedEvent,
+    daySelected,
     selectedEvent,
   } = useContext(GlobalContext);
   const auth = useContext(AuthContext);
@@ -57,7 +58,7 @@ export default function EventModal() {
         dispatchCalEvent({ type: 'push', payload: responseData.event });
         setShowEventModal(false);
         setSelectedEvent(null);
-      } catch (err) {}
+      } catch (err) { }
     } else {
       try {
         const responseData = await sendRequest(
@@ -79,7 +80,7 @@ export default function EventModal() {
         dispatchCalEvent({ type: 'push', payload: responseData.event });
         setShowEventModal(false);
         setSelectedEvent(null);
-      } catch (err) {}
+      } catch (err) { }
     }
   };
 
@@ -96,7 +97,7 @@ export default function EventModal() {
       dispatchCalEvent({ type: 'delete', payload: selectedEvent });
       setShowEventModal(false);
       setSelectedEvent(null);
-    } catch (err) {}
+    } catch (err) { }
   };
 
   return (

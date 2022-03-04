@@ -11,7 +11,7 @@ const NavLinks = (props) => {
   return (
     <React.Fragment>
       <div className="nav-links back-main-page-link-grid">
-        <a href="https://smbutordesign.hu/"> VISSZA FŐOLDAL</a>
+        <a href="https://smbutordesign.hu/"> VISSZA FŐOLDALRA</a>
       </div>
   
      

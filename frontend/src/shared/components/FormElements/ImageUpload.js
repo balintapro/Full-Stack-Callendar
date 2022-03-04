@@ -15,9 +15,7 @@ const ImageUpload = props => {
       return;
     }
     const fileReader = new FileReader();
-    fileReader.onload = () => {
-      setPreviewUrl(fileReader.result);
-    };
+    fileReader.onload = () => setPreviewUrl(fileReader.result); // mehet one linerbe az ilyesmi
     fileReader.readAsDataURL(file);
   }, [file]);
 

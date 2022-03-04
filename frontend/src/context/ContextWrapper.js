@@ -41,18 +41,19 @@ export default function ContextWrapper(props) {
   return (
     <GlobalContext.Provider
       value={{
+        // érdemes sorbe rendezni ezeket, először funkciók utána változók, vagy fordítva
         monthIndex,
-        setMonthIndex,
         smallCallendarMonth,
-        setSmallCallendarMonth,
         daySelected,
-        setDaySelected,
         showEventModal,
+        selectedEvent,
+        savedEvents,
+        setMonthIndex,
+        setSmallCallendarMonth,
+        setDaySelected,
         setShowEventModal,
         dispatchCalEvent,
-        selectedEvent,
         setSelectedEvent,
-        savedEvents,
       }}
     >
       {props.children}

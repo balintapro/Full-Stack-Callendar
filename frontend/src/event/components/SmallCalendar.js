@@ -19,7 +19,7 @@ export default function SmallCalendar() {
     setCurrentMonthIdx(monthIndex);
   }, [monthIndex]);
 
-  function handlePrevMonth() {
+  const handlePrevMonth = () => {
     setCurrentMonthIdx(currentMonthIdx - 1);
   }
 
@@ -40,6 +40,8 @@ export default function SmallCalendar() {
       return '';
     }
   }
+
+// <span> ◀</span> ezek mehetnek css-el ::after ::before -ba
 
   return (
     <div className="smallcalendar">

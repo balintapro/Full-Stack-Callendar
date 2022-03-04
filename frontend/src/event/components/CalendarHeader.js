@@ -4,20 +4,16 @@ import './CalendarHeader.css';
 
 import GlobalContext from '../../context/GlobalContext';
 export default function CalendarHeader() {
+  // ha konzisztens akkor a one linerek szebbek
   const { monthIndex, setMonthIndex } = useContext(GlobalContext);
-  function handlePrevMonth() {
-    setMonthIndex(monthIndex - 1);
-  }
-  function handleNextMonth() {
-    setMonthIndex(monthIndex + 1);
-  }
-  function handleReset() {
-    setMonthIndex(
-      monthIndex === dayjs().month()
-        ? monthIndex + Math.random()
-        : dayjs().month()
-    );
-  }
+  const handlePrevMonth = () => setMonthIndex(monthIndex - 1);
+  const handleNextMonth = () => setMonthIndex(monthIndex + 1);
+  const handleReset = () => setMonthIndex(
+    monthIndex === dayjs().month()
+      ? monthIndex + Math.random()
+      : dayjs().month()
+  );
+
   return (
     <React.Fragment>
       <button className="calendarheader-prev-button" onClick={handlePrevMonth}>

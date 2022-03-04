@@ -19,6 +19,8 @@ const MainNavigation = (props) => {
     setDrawerIsOpen(false);
   };
 
+  // spanok helyett mehet egy eltartás a headerbe
+
   return (
     <React.Fragment>
       {drawerIsOpen && <Backdrop onClick={closeDrawerHandler} />}
@@ -33,9 +35,6 @@ const MainNavigation = (props) => {
           className="main-navigation__menu-btn"
           onClick={openDrawerHandler}
         >
-          <span />
-          <span />
-          <span />
         </button>
 
         <div className="title-grid">

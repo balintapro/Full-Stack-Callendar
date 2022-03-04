@@ -1,17 +1,18 @@
 import React from 'react';
 
 const GlobalContext = React.createContext({
+  // érdemes sorbe rendezni ezeket, először funkciók utána változók, vagy fordítva
   monthIndex: 0,
-  setMonthIndex: (index) => {},
   smallCallendarMonth: 0,
-  setSmallCallendarMonth: (index) => {},
   daySelected: null,
-  setDaySelected: (day) => {},
   showEventModal: false,
-  setShowEventModal: () => {},
-  dispatchCalEvent: ({ type, payload }) => {},
   savedEvents: [],
   selectedEvent: null,
+  setMonthIndex: (index) => {},
+  setSmallCallendarMonth: (index) => {},
+  setDaySelected: (day) => {},
+  setShowEventModal: () => {},
+  dispatchCalEvent: ({ type, payload }) => {},
   setSelectedEvent: () => {},
 });
 
